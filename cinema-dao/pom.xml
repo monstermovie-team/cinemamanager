@@ -47,7 +47,7 @@
         <!-- entity -->
         <dependency>
             <groupId>edu.nf</groupId>
-            <artifactId>movie-entity</artifactId>
+            <artifactId>cinema-entity</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

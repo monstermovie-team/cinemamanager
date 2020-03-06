@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
 
-    <artifactId>movie-service</artifactId>
+    <artifactId>cinema-service</artifactId>
 
     <dependencies>
         <dependency>
@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>edu.nf</groupId>
-            <artifactId>movie-util</artifactId>
+            <artifactId>cinema-util</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

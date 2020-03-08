@@ -1,7 +1,5 @@
 package edu.nf.movie.test;
 
-import edu.nf.movie.cinema.dao.CinemaDao;
-import edu.nf.movie.cinema.entity.CinemaInfo;
 import edu.nf.movie.cinema.service.CinemaService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +17,7 @@ public class CinemaDaoTest {
 
     @Test
     public void loadUserByUsername() {
-        UserDetails info = cinemaService.loadUserByUsername("123456789");
-        info.getAuthorities();
+        UserDetails info = cinemaService.loadUserByUsername("987654321");
+        System.out.println(info.getPassword() + info.getUsername());
     }
 }

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fbbb6d82-df27-43d7-8995-fbea556c2b71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-entity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-entity/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-pcweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-dao/src/main/resources/application-dao.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-dao/src/main/resources/application-dao.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-dao/src/main/resources/mapper/cinemaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-dao/src/main/resources/mapper/cinemaInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../新建文件夹/cinemamanager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../supermanager" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,6 +94,12 @@
       <recent name="edu.nf.movie.cinema.dao" />
       <recent name="edu.nf.movie.cinema.service.impl" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\moviead" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.nf.movie.cinema.pcweb.controller" />
       <recent name="edu.nf.test" />
@@ -102,20 +108,27 @@
       <recent name="edu.nf.movie.cinema.pcweb.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
       <recent name="E:\spring\cinemamanager\cinema-dao\src\main\resources\mapper" />
       <recent name="E:\spring\cinemamanager\movie-util\src\main\java\edu\nf\movie\util" />
       <recent name="E:\spring\monstermovie\movie-dao\src\main\resources\mapper" />
       <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\cinemabackstage\js" />
-      <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\cinemabackstage" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\moviead" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CinemaDaoTest.loadUserByUsername (2)">
+  <component name="RunManager" selected="Spring Boot.MonsterMovieApplication">
+    <configuration name="PasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.nf.movie.util.PasswordUtils" />
+      <module name="cinema-util" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.movie.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CinemaDaoTest.loadUserByUsername (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinema-pcweb" />
       <extension name="coverage">
@@ -164,22 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuperAdminDaoTest.findSuperAdminByAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cinema-dao" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.nf.movie.cinema.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.nf.movie.cinema.dao" />
-      <option name="MAIN_CLASS_NAME" value="edu.nf.movie.cinema.dao.SuperAdminDaoTest" />
-      <option name="METHOD_NAME" value="findSuperAdminByAccounts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MonsterMovieApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="cinema-pcweb" />
       <extension name="coverage">
@@ -195,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CinemaDaoTest.loadUserByUsername (2)" />
         <item itemvalue="Spring Boot.MonsterMovieApplication" />
+        <item itemvalue="Application.PasswordUtils" />
+        <item itemvalue="JUnit.CinemaDaoTest.loadUserByUsername (2)" />
         <item itemvalue="JUnit.CinemaDaoTest.loadUserByUsername (1)" />
         <item itemvalue="JUnit.SuperAdminDaoTest.findSuperAdminByAccounts (1)" />
-        <item itemvalue="JUnit.SuperAdminDaoTest.findSuperAdminByAccounts" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +226,12 @@
       <workItem from="1583409412564" duration="3137000" />
       <workItem from="1583416937612" duration="2604000" />
       <workItem from="1583420047173" duration="659000" />
-      <workItem from="1583486182146" duration="893000" />
+      <workItem from="1583486182146" duration="2171000" />
+      <workItem from="1583488483906" duration="141000" />
+      <workItem from="1583566339096" duration="547000" />
+      <workItem from="1583567322776" duration="301000" />
+      <workItem from="1583649362575" duration="395000" />
+      <workItem from="1583660451881" duration="2134000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1583149734797</created>
@@ -266,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583486360772</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="创建影厅后台管理">
+      <created>1583487100343</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583487100343</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,51 +326,55 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583417327115" />
-    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1583486359660">
+    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1583487099175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583486359660" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1583486627503">
+    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583487099175" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1583662634336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1583411252405" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583486627503" />
-    <state width="1877" height="211" key="GridCell.Tab.0.bottom" timestamp="1583419561976">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583662634336" />
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1685" height="343" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583412826361" />
-    <state width="1877" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561976" />
-    <state width="1877" height="211" key="GridCell.Tab.0.center" timestamp="1583419561975">
+    <state width="1685" height="188" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1583662605939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1685" height="343" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583412826360" />
-    <state width="1877" height="211" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561975" />
-    <state width="1877" height="211" key="GridCell.Tab.0.left" timestamp="1583419561975">
+    <state width="1685" height="188" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605939" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1583662605939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1685" height="343" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583412826360" />
-    <state width="1877" height="211" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561975" />
-    <state width="1877" height="211" key="GridCell.Tab.0.right" timestamp="1583419561976">
+    <state width="1685" height="188" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605939" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1685" height="343" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583412826360" />
-    <state width="1877" height="211" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561976" />
-    <state width="1877" height="325" key="GridCell.Tab.1.bottom" timestamp="1583419561972">
+    <state width="1685" height="188" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="325" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561972" />
-    <state width="1877" height="325" key="GridCell.Tab.1.center" timestamp="1583419561972">
+    <state width="1685" height="325" key="GridCell.Tab.1.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="325" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561972" />
-    <state width="1877" height="325" key="GridCell.Tab.1.left" timestamp="1583419561972">
+    <state width="1685" height="325" key="GridCell.Tab.1.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="325" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561972" />
-    <state width="1877" height="325" key="GridCell.Tab.1.right" timestamp="1583419561972">
+    <state width="1685" height="325" key="GridCell.Tab.1.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1583662605940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="325" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583419561972" />
+    <state width="1685" height="325" key="GridCell.Tab.1.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583662605940" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1583301129583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -387,15 +400,15 @@
     </state>
     <state x="396" y="94" key="SettingsEditor/0.0.1728.1040@0.0.1728.1040" timestamp="1583411284022" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583417868965" />
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1583486443265">
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1583487102489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583486443265" />
-    <state x="692" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1583409418147">
-      <screen x="0" y="0" width="1728" height="1040" />
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583487102489" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1583660468304">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="692" y="336" key="com.intellij.ide.util.TipDialog/0.0.1728.1040@0.0.1728.1040" timestamp="1583409418147" />
-    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583398011938" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583660468304" />
     <state x="711" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583398872039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -404,5 +417,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="650" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583392079113" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583661563661">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583661563661" />
   </component>
 </project>

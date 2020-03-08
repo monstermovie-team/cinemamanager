@@ -21,7 +21,7 @@
     </resultMap>
 
     <select id="findCinemaByAccounts" resultMap="CustomerMap" parameterType="string">
-         select mu.mu_id,mu.mu_name,mu.mu_accounts,mu.mu_password,mu.mu_photo,mu.mu_sex,mu.mu_telephone,
+        select mu.mu_id,mu.mu_name,mu.mu_accounts,mu.mu_password,mu.mu_photo,mu.mu_sex,mu.mu_telephone,
         mu.mu_address,mu.mu_IDcard,mu.mu_state,mr.mr_id,mr.mr_name
         from movieadministrator_user mu
         join movieadministrator_user_role mur on mu.mu_id=mur.mu_id

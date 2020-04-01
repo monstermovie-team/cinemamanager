@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="穷在闹市" />
+		<!-- 作者 -->
+		<meta name="revised" content="穷在闹市.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>添加上映电影列表</title>
+		<!-- 公共样式 开始 -->
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<script type="text/javascript" src="framework/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<!-- 滚动条插件 -->
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+		<script src="framework/jquery-ui-1.10.4.min.js"></script>
+		<script src="framework/jquery.mousewheel.min.js"></script>
+		<script src="framework/jquery.mCustomScrollbar.min.js"></script>
+		<script src="framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+		<style>
+			.layui-form{
+				margin-right: 30%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cBody">
+			<form id="addForm" class="layui-form">
+				<div class="layui-form-item" id="divApp">
+					<label class="layui-form-label">放映日期</label>
+					<div class="layui-input-inline shortInput">
+						<input type="date" name="identity" required lay-verify="required|identity" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">选择电影</label>
+					<div class="layui-input-inline">
+						<select id="movieIdList">
+							<option>请选择</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select id="movieNameList">
+							<option>请选择</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<input type="text" name="movieName2" placeholder="输入电影名">
+						<button class="layui-btn" lay-submit lay-filter="submitBut">查找</button>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">厅名</label>
+					<div class="layui-input-inline">
+						<select name="cityid" id="cityid2">
+							<option value="">2</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">影厅类型</label>
+	                <div class="layui-input-inline">
+	                    <select name="cityid" id="cityid">
+	                        <option value="">1</option>
+	                    </select>
+	                </div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">开始时间</label>
+					<div class="layui-input-inline shortInput">
+						<input type="text" name="realName" required lay-verify="required|ZHCheck" placeholder="例:张三(只允许输入中文)" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">结束时间</label>
+					<div class="layui-input-inline shortInput">
+						<input type="text" name="realName" required lay-verify="required|ZHCheck" placeholder="例:张三(只允许输入中文)" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">是否开通</label>
+					<div class="layui-input-block">
+						<input type="radio" name="sex" value="nan" title="启用" checked>
+						<input type="radio" name="sex" value="nv" title="禁用">
+					</div>
+				</div>
+				
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" >立即提交</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script>
+			$(function(){
+				loadForm();
+			})
+			function  loadForm() {
+				layui.use('form', function(){
+					var $ = layui.jquery;
+					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+					$.ajax({
+						url : 'list_movie_info',
+						method : 'get',
+						success : function (result) {
+							if(result.code == 200){
+								$.each(result.data,function (index,obj) {
+									$('#movieIdList').append(
+											'<option value="'+obj.movieId+'">'+obj.movieId+'</option>'
+									);
+									form.render();
+								});
+								$.each(result.data,function (index,obj) {
+									$('#movieNameList').append(
+											'<option>'+obj.movieName+'</option>'
+									);
+									form.render();
+								});
+							}
+						}
+					});
+				});
+			}
+		</script>
+	</body>
+
+</html>

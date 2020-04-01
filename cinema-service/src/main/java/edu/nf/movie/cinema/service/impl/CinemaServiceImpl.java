@@ -21,8 +21,6 @@ import java.util.List;
  * @author Administrator
  */
 @Service("cinemaService")
-@Transactional(rollbackFor = RuntimeException.class)
-@MapperScan("edu.nf.movie.cinema.dao")
 public class CinemaServiceImpl implements CinemaService {
 
     @Autowired

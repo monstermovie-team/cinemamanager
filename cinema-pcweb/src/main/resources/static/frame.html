@@ -9,11 +9,6 @@
 		<!--国产浏览器高速模式-->
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="穷在闹市" />
-		<!-- 作者 -->
-		<meta name="revised" content="穷在闹市.v3, 2019/05/01" />
-		<!-- 定义页面的最新版本 -->
-		<meta name="description" content="网站简介" />
 		<!-- 网站简介 -->
 		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
 		<title>怪兽影院后台</title>
@@ -21,7 +16,6 @@
 		<!-- 公共样式 开始 -->
 		<link rel="icon" href="img/MonsterLogo.png" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="css/base.css">
-		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 		<script type="text/javascript" src="framework/jquery-1.11.3.min.js" ></script>
 		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
 	    <!--[if lt IE 9]>
@@ -35,6 +29,7 @@
 		<script src="framework/jquery.mousewheel.min.js"></script>
 		<script src="framework/jquery.mCustomScrollbar.min.js"></script>
 		<script src="framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 		<!-- 公共样式 结束 -->
 		
 		<link rel="stylesheet" type="text/css" href="css/frameStyle.css">
@@ -55,24 +50,21 @@
 		    <div class="menu">
 		        <ul>
 		        	<li>
-		                <a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/qdAPI.html',this)"><i class="iconfont icon-zhishi left"></i>前端API</a>
-		            </li>
-		        	<li>
 		                <a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/iconfont.html',this)"><i class="iconfont icon-huojian left"></i>iconfont字体库</a>
 		           	</li>
 		        	<li>
-		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>分管管理<i class="iconfont icon-dajiantouyou right"></i></a>
+		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>影片放映<i class="iconfont icon-dajiantouyou right"></i></a>
 		                <dl>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_add.html',this)">添加分管</a></dt>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_list.html',this)">分管列表</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('movie_updown_add.html',this)">添加放映</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('movie_updown_list.html',this)">放映列表</a></dt>
 		                </dl>
 		            </li>
 		        	<li>
-		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-shangpin left"></i>商品管理<i class="iconfont icon-dajiantouyou right"></i></a>
+		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-shangpin left"></i>影厅管理<i class="iconfont icon-dajiantouyou right"></i></a>
 		                <dl>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/goodsManage/goodsType_list.html',this)">分类列表</a></dt>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/goodsManage/goods_list.html',this)">基本商品库</a></dt>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/goodsManage/goods_add.html',this)">添加商品</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('movieHall_list.html',this)">影厅分类列表</a></dt>
+		                	<!--<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/goodsManage/goods_list.html',this)">基本商品库</a></dt>-->
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('movieHall_add.html',this)">添加影厅</a></dt>
 		                </dl>
 		            </li>
 		        	<li>

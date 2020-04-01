@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.movie.moviehall.dao.MovieHallDao">
+
+    <resultMap id="MovieHallMap" type="edu.nf.movie.moviehall.entity.MovieHallInfo">
+        <id property="hallId" column="hall_id"/>
+        <result property="hallName" column="hall_name"/>
+        <result property="hallType" column="hall_type"/>
+        <result property="seatNum" column="seat_num"/>
+        <result property="hallPrice" column="hall_price"/>
+        <result property="stateId" column="state_id"/>
+        <association property="hallState" resultMap="HallStateMap"/>
+    </resultMap>
+
+    <resultMap id="MovieMap" type="edu.nf.movie.moviehall.entity.MovieInfo">
+        <id property="movieId" column="movie_id"/>
+        <result property="movieName" column="movie_name"/>
+        <result property="movieEnglishName" column="movie_english_name"/>
+        <result property="movieWantToSee" column="movie_wan_to_see"/>
+        <result property="movieType" column="movie_type"/>
+        <result property="movieRegion" column="movie_region"/>
+        <result property="movieYear" column="movie_year"/>
+        <result property="movieState" column="movie_state"/>
+        <result property="movieTime" column="movie_time"/>
+        <result property="movieIntroduce" column="movie_introduce"/>
+    </resultMap>
+
+    <resultMap id="MovieUpdownMap" type="edu.nf.movie.moviehall.entity.MovieUpdown">
+        <id property="updownId" column="updown_id"/>
+        <result property="upDate" column="up_date"/>
+        <result property="movieId" column="movie_id"/>
+        <result property="movieName" column="movie_name"/>
+        <result property="hallId" column="hal_id"/>
+        <result property="movieStartTime" column="start_time"/>
+        <result property="movieEndTime" column="end_time"/>
+        <association property="movieInfo" resultMap="MovieMap"/>
+        <association property="movieHallInfo" resultMap="MovieHallMap"/>
+        <association property="hallState" resultMap="HallStateMap"/>
+    </resultMap>
+
+    <resultMap id="HallStateMap" type="edu.nf.movie.moviehall.entity.HallState">
+        <id property="stateId" column="state_id"/>
+        <result property="hallState" column="hall_state"/>
+    </resultMap>
+
+    <!-- 放映列表 -->
+    <select id="listMovieUpdownInfo" resultMap="MovieUpdownMap" >
+        select mu.updown_id, mu.up_date,mu.movie_name, mu.start_time, mu.end_time, mh.hall_name, mh.hall_type, hs.hall_state
+        from movie_updown mu
+        join movie_hall mh on mu.hall_id = mh.hall_id
+        join hall_state hs on mh.state_id = hs.state_id
+        where hs.state_id = 1
+    </select>
+    <!-- 根据ID查询上下映信息 -->
+    <select id="getMovieUpdownInfoById" resultMap="MovieUpdownMap">
+        select mu.updown_id, mu.up_date,mu.movie_id, mu.movie_name, mu.start_time, mu.end_time, mh.hall_name, mh.hall_type, hs.hall_state
+        from movie_updown mu
+        join movie_hall mh on mu.hall_id = mh.hall_id
+        join hall_state hs on mh.state_id = hs.state_id
+        where mu.updown_id = #{updownId}
+    </select>
+     <!--查询电影根据ID-->
+    <select id="listMovieInfo" resultMap="MovieMap">
+        select  movie_id,movie_name from movie_info
+    </select>
+
+    <!-- ID查询信息 -->
+    <select id="findMovieInfoById" resultMap="MovieMap" parameterType="integer">
+        select  movie_id,movie_name from movie_info where movie_id = #{movieId}
+    </select>
+
+    <!-- 名称查询ID -->
+    <select id="findMovieInfoByName" resultMap="MovieMap" parameterType="string">
+        select  movie_id,movie_name from movie_info where movie_name = #{movieName}
+    </select>
+
+    <!-- 添加上映信息 -->
+    <insert id="addMovieUpdown" parameterType="edu.nf.movie.moviehall.entity.MovieUpdown">
+        insert into movie_updown(up_date,movie_id,movie_name,hall_id,start_time,end_time)
+            values('2020-3-13','1','调酒师','1','8:30','12:00');
+    </insert>
+
+    <!-- 添加影厅信息 -->
+    <insert id="addMovieHall" parameterType="edu.nf.movie.moviehall.entity.MovieHallInfo">
+        insert into movie_hall(hall_name,hall_type,seat_num,hall_price,state_id)
+        values(#{hallName},#{hallType},#{seatNum},#{hallPrice},#{stateId})
+    </insert>
+
+    <!-- 删除影厅 -->
+    <delete id="removeMovieHall" parameterType="integer">
+        delete from movie_hall where hall_id = #{hallId}
+    </delete>
+
+    <!-- 影厅信息 -->
+    <select id="listMovieHall" resultMap="MovieHallMap">
+        select mh.hall_id,mh.hall_name,mh.hall_type,mh.seat_num,mh.hall_price,mh.state_id,hs.hall_state
+        from movie_hall mh
+        join hall_state hs on mh.state_id = hs.state_id
+        <where>
+            <if test="param1.hallName != null and param1.hallName != '' ">
+                mh.hall_name = #{param1.hallName}"%"
+            </if>
+        </where>
+    </select>
+
+<!--    &lt;!&ndash; 根据名称查影厅信息 &ndash;&gt;
+    <select id="listMovieHallByName" parameterType="java.lang.String" resultMap="MovieHallMap">
+        select mh.hall_id,mh.hall_name,mh.hall_type,mh.seat_num,mh.hall_price,mh.state_id,hs.hall_state
+        from movie_hall mh
+        join hall_state hs on mh.state_id = hs.state_id
+        where mh.hall_name = #{hallName}
+    </select>-->
+
+    <!-- 根据ID查询影厅信息 -->
+    <select id="getMovieHallById" parameterType="integer" resultMap="MovieHallMap">
+        select mh.hall_id,mh.hall_name,mh.hall_type,mh.seat_num,mh.hall_price,mh.state_id,hs.hall_state
+        from movie_hall mh
+        join hall_state hs on mh.state_id = hs.state_id
+        where mh.hall_id = #{movieHallId}
+    </select>
+    
+    <update id="updateHallInfo" parameterType="edu.nf.movie.moviehall.entity.MovieHallInfo">
+        update movie_hall set hall_name = #{hallName},hall_type = #{hallType},
+        seat_num = #{seatNum}, hall_price = #{hallPrice}, state_id = #{stateId}
+        where hall_id = #{hallId}
+    </update>
+</mapper>

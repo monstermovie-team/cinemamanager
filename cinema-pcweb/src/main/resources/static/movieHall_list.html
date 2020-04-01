@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>影厅分类信息</title>
+
+		<!-- 公共样式 开始 -->
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<script type="text/javascript" src="framework/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<!-- 滚动条插件 -->
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+		<script src="framework/jquery-ui-1.10.4.min.js"></script>
+		<script src="framework/jquery.mousewheel.min.js"></script>
+		<script src="framework/jquery.mCustomScrollbar.min.js"></script>
+		<script src="framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/jquery.pagination.js"></script>
+		<link type="text/css" href="css/pagination.css">
+	</head>
+
+	<body>
+		<div class="cBody">
+			<div class="console">
+				<form id="selectForm" class="layui-form">
+					<div class="layui-form-item">
+						<div class="layui-input-inline">
+							<input type="text" name="hallName" placeholder="输入影厅名称" class="layui-input"/>
+						</div>
+						<input type="button" class="layui-btn" id="selectInfo" value="搜索"/>
+					</div>
+				</form>
+				<script>
+					layui.use('form', function() {
+						var form = layui.form;
+						//监听提交
+						form.on('submit(formDemo)', function(data) {
+							layer.msg(JSON.stringify(data.field));
+							return false;
+						});
+					});
+				</script>
+			</div>
+			
+			<table class="layui-table">
+				<thead>
+					<tr>
+						<th>编号</th>
+						<th>厅名</th>
+						<th>厅类型</th>
+						<th>座位数</th>
+						<th>价格</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="tab">
+
+				</tbody>
+			</table>
+			<div id="pages"></div>
+		</div>
+
+		<script>
+			$(function () {
+				start();
+
+				$('#selectInfo').on('click',function(){
+					$('#tab').remove();
+					start();
+				})
+			});
+
+			function start(){
+				var params = $('#selectForm').serialize();
+				$.ajax({
+					url: 'list_movie_hall',
+					method: 'get',
+					xhrFields: {
+						withCredentials: true
+					},
+					data: 'pageNum=1&pageSize=18&'+params,
+					success: function (result) {
+						if(result.code == 200){
+							listMovieHall(result);
+							commentPage(result.data);
+						}
+					}
+				});
+			}
+
+			function listMovieHall(result) {
+				$.each(result.data.list,function(index, obj){
+					$('#tab').append(
+							'<tr>'+
+							'<td>'+obj.hallId+'</td>' +
+							'<td>'+obj.hallName+'</td>' +
+							'<td>'+obj.hallType+'</td>' +
+							'<td>'+obj.seatNum+'</td>' +
+							'<td>'+obj.hallPrice+'</td>' +
+							'<td>'+obj.hallState.hallState+'</td>' +
+							'<td>' +
+							'<button class="layui-btn layui-btn-xs" onclick="updateBut('+obj.hallId+')">修改</button>' +
+							'<button class="layui-btn layui-btn-xs" name="btnDelete'+obj.hallId+'" id="'+obj.hallId+'">删除</button>' +
+							'</td>' +
+							'</tr>'
+					)
+					$("button[name='btnDelete"+obj.hallId+"']").on('click',function(){
+						var r = confirm("你确定要删除吗？");
+						var hallId = $(this).attr('id');
+						if (r == true) {
+							$.ajax({
+								url : 'remove_movie_hall',
+								method : 'post',
+								data : 'hallId=' +hallId,
+								success : function (result) {
+									location.href="movieHall_list.html";
+									alert("删除成功！");
+								}
+							});
+						}
+					});
+				});
+			}
+
+			//分页
+			function commentPage(result) {//大分页
+				layui.use(['laypage', 'layer'], function() {
+					var laypage = layui.laypage,
+							layer = layui.layer;
+					//总页数大于页码总数
+					laypage.render({
+						elem: 'pages'
+						,curr:1
+						,group:5
+						,skip:false
+						,layout: ['count', 'prev', 'page', 'next']
+						,jump: function(pageNum){
+							pageNum = ++pageNum;
+							$.ajax({
+								url: 'list_movie_hall',
+								method: 'get',
+								xhrFields: {
+									withCredentials: true
+								},
+								data:'pageNum='+pageNum+'&pageSize='+result.pageSize,
+								success: function (rp) {
+									listMovieHall(rp);
+								}
+							});
+						}
+					});
+				});
+			}
+		</script>
+		<script>
+			//修改按钮
+			var updateFrame = null;
+			function updateBut(id){
+				window.id = id;
+				layui.use('layer', function() {
+					var layer = layui.layer;
+					//iframe层-父子操作
+					updateFrame = layer.open({
+						title: "影厅信息修改",
+						type: 2,
+						area: ['30%', '60%'],
+						scrollbar: false,	//默认：true,默认允许浏览器滚动，如果设定scrollbar: false，则屏蔽
+						maxmin: true,
+						content: 'movieHall_update.html'
+					});
+				});
+			}
+		</script>
+	</body>
+</html>

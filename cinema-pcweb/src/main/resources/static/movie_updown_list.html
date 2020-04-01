@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>添加放映信息</title>
+		<!-- 公共样式 开始 -->
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<script type="text/javascript" src="framework/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<!-- 滚动条插件 -->
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+		<script src="framework/jquery-ui-1.10.4.min.js"></script>
+		<script src="framework/jquery.mousewheel.min.js"></script>
+		<script src="framework/jquery.mCustomScrollbar.min.js"></script>
+		<script src="framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+		<script src="js/jquery.pagination.js"></script>
+		<script src="css/pagination.css"></script>
+	</head>
+	<body>
+		<div class="cBody">
+			<div class="console">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<div class="layui-input-inline">
+							<input type="text" name="name" required lay-verify="required" placeholder="输入分管名称" autocomplete="off" class="layui-input">
+						</div>
+						<button class="layui-btn" lay-submit lay-filter="formDemo">检索</button>
+					</div>
+				</form>
+			</div>
+			<table class="layui-table">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>放映日期</th>
+						<th>电影名称</th>
+						<th>厅名</th>
+						<th>影厅类型</th>
+						<th>开始时间</th>
+						<th>结束时间</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="tab">
+
+				</tbody>
+			</table>
+			<!--<div id="comment_page">
+
+			</div>-->
+		</div>
+	<script>
+		$(function () {
+			start();
+		});
+
+		function start(){
+			$.ajax({
+				url: 'list_movie_updown',
+				method: 'get',
+				xhrFields: {
+					withCredentials: true
+				},
+				data: 'pageNum=1&pageSize=8',
+				success: function (result) {
+					if(result.code == 200){
+						listMovieUpdown(result);
+						commentPage(result.data);
+					}
+				}
+			});
+		}
+
+		function listMovieUpdown(result) {
+			$.each(result.data.list,function (index,obj) {
+				$('#tab').append(
+						'<tr>'
+						+'<td>'+obj.updownId+'</td>'
+						+'<td>'+obj.upDate+'</td>'
+						+'<td>'+obj.movieInfo.movieName+'</td>'
+						+'<td>'+obj.movieHallInfo.hallName+'</td>'
+						+'<td>'+obj.movieHallInfo.hallType+'</td>'
+						+'<td>'+obj.movieStartTime+'</td>'
+						+'<td>'+obj.movieEndTime+'</td>'
+						+'<td>'+obj.hallState.hallState+'</td>'
+						+'<td><button class="layui-btn layui-btn-xs" onclick="updateBut('+obj.updownId+')">修改</button>'
+						+'<button name="remove'+obj.updownId+'" class="layui-btn layui-btn-xs" id="'+obj.updownId+'">删除</button></td>'
+						+'</tr>'
+				)
+				$("button[name='remove"+obj.updownId+"']").on('click',function(){
+					alert($("button[name='remove"+obj.updownId+"']").attr('id'));
+				});
+			});
+		}
+
+		//分页
+		function commentPage(result) {//大分页
+			$('#comment_page').pagination(result.total, { //第一个参数指定共多少条记录
+				items_per_page: result.pageSize, // 每页显示多少条记录
+				next_text: '>', //下一页按钮图标
+				prev_text: '<', //上一页按钮图标
+				num_display_entries: 4,//主体页数
+				num_edge_entries: 1, //边缘页数
+				callback: function (pageNum) {//定义一个回调函数，用于每次点击页码发起分页查询请求
+					pageNum = ++pageNum;
+					$.ajax({
+						url: 'list_movie_updown',
+						method: 'get',
+						xhrFields: {
+							withCredentials: true
+						},
+						data:'pageNum='+pageNum+'&pageSize='+result.pageSize,
+						success: function (rp) {
+							loadMovieUpdown(rp);
+						}
+					});
+				}
+			});
+		}
+	</script>
+		<script>
+			//修改按钮
+			var updateFrame = null;
+			function updateBut(id){
+				window.id = id;
+				layui.use('layer', function() {
+					var layer = layui.layer;
+					//iframe层-父子操作
+					updateFrame = layer.open({
+						title: "影厅上下映修改",
+						type: 2,
+						area: ['30%', '60%'],
+						scrollbar: false,	//默认：true,默认允许浏览器滚动，如果设定scrollbar: false，则屏蔽
+						maxmin: true,
+						content: 'movieUpdown_update.html'
+					});
+				});
+			}
+		</script>
+	</body>
+</html>

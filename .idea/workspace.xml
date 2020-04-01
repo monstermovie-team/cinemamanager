@@ -2,9 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbb6d82-df27-43d7-8995-fbea556c2b71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cinema-dao/src/main/java/edu/nf/movie/moviehall/dao/MovieHallDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-dao/src/main/resources/mapper/movieHallMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/HallState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieHallInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieUpdown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/moviehall/pcweb/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/moviehall/pcweb/controller/MovieHallController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/moviehall/pcweb/vo/ResultVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/css/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/cardFMImgError.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/cardZMImgError.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/fullScreenBut_BG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/goodsPIC1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/goodsPIC2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/goodsPIC3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/goodsPIC4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_admin_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_fj_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/login_sh_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/other/maintain_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/other/maintain_pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/other/maintain_pic_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/top_jt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/images/yyzzImgError.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/js/jquery.pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieUpdown_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/cinema/service/exception/DataAccessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieHallService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieHallServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-entity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-entity/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/MonsterMovieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/MonsterMovieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/controller/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/cinema/pcweb/controller/CinemaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/css/login1.css" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/css/login1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/framework/cframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/framework/cframe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/agent/agent_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/agent/agent_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/base/maintain.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/base/maintain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/goodsType_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/goods_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/goods_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/goods_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/specifications_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/specifications_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/specifications_list1.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/tgls/goodsManage/specifications_list1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/cinema/service/impl/CinemaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/cinema/service/impl/CinemaServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +87,8 @@
         <option value="Interface" />
         <option value="FxmlFile" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,7 +130,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../supermanager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,27 +148,28 @@
       <recent name="edu.nf.movie.cinema.service.impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\tgls\agent" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
       <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\moviead" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.nf.movie.cinema.service.exception" />
+      <recent name="edu.nf.movie.moviehall.pcweb.vo" />
+      <recent name="edu.nf.movie.moviehall.pcweb.controller" />
       <recent name="edu.nf.movie.cinema.pcweb.controller" />
       <recent name="edu.nf.test" />
-      <recent name="edu.nf.movie.cinema.dao" />
-      <recent name="edu.nf.movie.cinema.entity" />
-      <recent name="edu.nf.movie.cinema.pcweb.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\images" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\js" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\js" />
+      <recent name="E:\spring\cinemamanager\cinema-dao\src\main\resources\mapper" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MonsterMovieApplication">
@@ -125,22 +182,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CinemaDaoTest.loadUserByUsername (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cinema-pcweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.nf.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.nf.test" />
-      <option name="MAIN_CLASS_NAME" value="edu.nf.test.CinemaDaoTest" />
-      <option name="METHOD_NAME" value="loadUserByUsername" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,17 +202,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuperAdminDaoTest.findSuperAdminByAccounts (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CinemaDaoTest.testMovieInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinema-pcweb" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.nf.test.*" />
+          <option name="PATTERN" value="edu.nf.movie.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.nf.test" />
-      <option name="MAIN_CLASS_NAME" value="edu.nf.test.SuperAdminDaoTest" />
-      <option name="METHOD_NAME" value="findSuperAdminByAccounts" />
+      <option name="PACKAGE_NAME" value="edu.nf.movie.test" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.movie.test.CinemaDaoTest" />
+      <option name="METHOD_NAME" value="testMovieInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CinemaDaoTest.testMovieType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinema-pcweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.movie.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.movie.test" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.movie.test.CinemaDaoTest" />
+      <option name="METHOD_NAME" value="testMovieType" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,10 +250,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MonsterMovieApplication" />
-        <item itemvalue="Application.PasswordUtils" />
+        <item itemvalue="JUnit.CinemaDaoTest.testMovieInfo" />
+        <item itemvalue="JUnit.CinemaDaoTest.testMovieType" />
         <item itemvalue="JUnit.CinemaDaoTest.loadUserByUsername (2)" />
-        <item itemvalue="JUnit.CinemaDaoTest.loadUserByUsername (1)" />
-        <item itemvalue="JUnit.SuperAdminDaoTest.findSuperAdminByAccounts (1)" />
+        <item itemvalue="Application.PasswordUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +294,23 @@
       <workItem from="1583662943915" duration="24000" />
       <workItem from="1583663260277" duration="38000" />
       <workItem from="1583672097932" duration="6796000" />
-      <workItem from="1583745735363" duration="3873000" />
+      <workItem from="1583745735363" duration="7097000" />
+      <workItem from="1583979281002" duration="9463000" />
+      <workItem from="1584068064603" duration="6759000" />
+      <workItem from="1584076319713" duration="7914000" />
+      <workItem from="1584152787452" duration="11972000" />
+      <workItem from="1584244138369" duration="8809000" />
+      <workItem from="1584323142367" duration="3965000" />
+      <workItem from="1584411886159" duration="5357000" />
+      <workItem from="1584424052800" duration="5196000" />
+      <workItem from="1584503173709" duration="1025000" />
+      <workItem from="1584504217452" duration="3640000" />
+      <workItem from="1584507874803" duration="450000" />
+      <workItem from="1584585566234" duration="7827000" />
+      <workItem from="1584675074124" duration="2029000" />
+      <workItem from="1584757744763" duration="9708000" />
+      <workItem from="1585718598377" duration="1765000" />
+      <workItem from="1585744838110" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1583149734797</created>
@@ -302,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583749033082</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新登陆">
+      <created>1583749844478</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583749844478</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,10 +419,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583151914756" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583307330332">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584591759159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583307330332" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584591759159" />
     <state x="518" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583417121530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -351,59 +431,63 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="378" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1583294188790" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583748973269">
+    <state x="349" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584426413852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583748973269" />
-    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1583749031218">
+    <state x="349" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584426413852" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583980226380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583749031218" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1583749103823">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583980226380" />
+    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1583749843177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583749843177" />
+    <state x="1247" y="367" key="FileChooserDialogImpl" timestamp="1584762889136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1583411252405" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583749103823" />
-    <state width="1877" height="387" key="GridCell.Tab.0.bottom" timestamp="1583749644928">
+    <state x="1247" y="367" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584762889136" />
+    <state width="1877" height="245" key="GridCell.Tab.0.bottom" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="387" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644928" />
-    <state width="1877" height="387" key="GridCell.Tab.0.center" timestamp="1583749644928">
+    <state width="1877" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.0.center" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="387" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644928" />
-    <state width="1877" height="387" key="GridCell.Tab.0.left" timestamp="1583749644928">
+    <state width="1877" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.0.left" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="387" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644928" />
-    <state width="1877" height="387" key="GridCell.Tab.0.right" timestamp="1583749644928">
+    <state width="1877" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.0.right" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="387" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644928" />
-    <state width="1877" height="387" key="GridCell.Tab.1.bottom" timestamp="1583749644929">
+    <state width="1877" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.1.bottom" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="387" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644929" />
-    <state width="1877" height="387" key="GridCell.Tab.1.center" timestamp="1583749644929">
+    <state width="1877" height="245" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.1.center" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="387" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644929" />
-    <state width="1877" height="387" key="GridCell.Tab.1.left" timestamp="1583749644928">
+    <state width="1877" height="245" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.1.left" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="387" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644928" />
-    <state width="1877" height="387" key="GridCell.Tab.1.right" timestamp="1583749644929">
+    <state width="1877" height="245" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
+    <state width="1877" height="245" key="GridCell.Tab.1.right" timestamp="1585745779430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="387" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583749644929" />
+    <state width="1877" height="245" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585745779430" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1583301129583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -429,26 +513,26 @@
     </state>
     <state x="396" y="94" key="SettingsEditor/0.0.1728.1040@0.0.1728.1040" timestamp="1583411284022" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583417868965" />
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1583749036154">
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1583749845975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583749036154" />
-    <state x="769" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1583745735348">
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583749845975" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1585747313740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="692" y="336" key="com.intellij.ide.util.TipDialog/0.0.1728.1040@0.0.1728.1040" timestamp="1583409418147" />
-    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583745735348" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585747313740" />
     <state x="711" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583398872039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583398872039" />
-    <state x="650" y="311" key="git4idea.merge.GitPullDialog" timestamp="1583392079113">
+    <state x="650" y="311" key="git4idea.merge.GitPullDialog" timestamp="1584074819770">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="650" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583392079113" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583661563661">
+    <state x="650" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584074819770" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584591857943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583661563661" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584591857943" />
   </component>
 </project>

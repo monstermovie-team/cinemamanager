@@ -1,6 +1,7 @@
 package edu.nf.movie.moviehall.pcweb.controller;
 
 import com.github.pagehelper.PageInfo;
+import edu.nf.movie.moviehall.entity.MovieCinema;
 import edu.nf.movie.moviehall.entity.MovieHallInfo;
 import edu.nf.movie.moviehall.entity.MovieInfo;
 import edu.nf.movie.moviehall.pcweb.vo.ResultVO;
@@ -59,8 +60,8 @@ public class MovieHallController extends BaseController{
     }
 
     @GetMapping("/list_movie_hall")
-    private ResultVO<PageInfo<MovieHallInfo>> listMovieHall(MovieHallInfo movieHallInfo,Integer pageNum, Integer pageSize){
-        PageInfo<MovieHallInfo> pageInfo = movieHallService.listMovieHall(movieHallInfo,pageNum, pageSize);
+    private ResultVO<PageInfo<MovieHallInfo>> listMovieHall(Integer pageNum, Integer pageSize){
+        PageInfo<MovieHallInfo> pageInfo = movieHallService.listMovieHall(pageNum, pageSize);
         return success(pageInfo);
     }
 
@@ -85,5 +86,16 @@ public class MovieHallController extends BaseController{
     @PostMapping("/update_movie_hall")
     private void updateHallInfo(MovieHallInfo movieHallInfo){
         movieHallService.updateHallInfo(movieHallInfo);
+    }
+
+    @GetMapping("/list_movie_cinema")
+    private ResultVO<List<MovieCinema>> listMovieCinemaInfo(){
+        List<MovieCinema> list = movieHallService.listMovieCinemaInfo();
+        return success(list);
+    }
+    @GetMapping("/get_cinema_id")
+    private ResultVO<MovieCinema> getInfoByName(String cinemaName){
+        MovieCinema cinema = movieHallService.getInfoByName(cinemaName);
+        return success(cinema);
     }
 }

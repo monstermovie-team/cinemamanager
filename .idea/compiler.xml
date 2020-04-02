@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cinema-pcweb" />
         <module name="cinema-util" />
-        <module name="cinema-dao" />
         <module name="cinema-entity" />
+        <module name="cinema-dao" />
         <module name="cinema-service" />
       </profile>
     </annotationProcessing>

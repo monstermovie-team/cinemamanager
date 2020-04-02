@@ -5,12 +5,23 @@
 
     <resultMap id="MovieHallMap" type="edu.nf.movie.moviehall.entity.MovieHallInfo">
         <id property="hallId" column="hall_id"/>
+        <result property="cinemaId" column="cinema_id"/>
         <result property="hallName" column="hall_name"/>
         <result property="hallType" column="hall_type"/>
-        <result property="seatNum" column="seat_num"/>
+        <result property="hallRow" column="hall_row"/>
+        <result property="hallCol" column="hall_col"/>
         <result property="hallPrice" column="hall_price"/>
         <result property="stateId" column="state_id"/>
         <association property="hallState" resultMap="HallStateMap"/>
+        <association property="movieCinema" resultMap="MovieCinema"/>
+    </resultMap>
+
+    <resultMap id="MovieCinema" type="edu.nf.movie.moviehall.entity.MovieCinema">
+        <id property="cinemaId" column="cinema_id"/>
+        <result property="cinemaName" column="cinema_name"/>
+        <result property="cinemaAddress" column="cinema_address"/>
+        <result property="cinemaImage" column="cinema_img"/>
+        <result property="cinemaNumber" column="cinema_number"/>
     </resultMap>
 
     <resultMap id="MovieMap" type="edu.nf.movie.moviehall.entity.MovieInfo">
@@ -48,26 +59,23 @@
     <select id="listMovieUpdownInfo" resultMap="MovieUpdownMap" >
         select mu.updown_id, mu.up_date,mu.movie_name, mu.start_time, mu.end_time, mh.hall_name, mh.hall_type, hs.hall_state
         from movie_updown mu
-        join movie_hall mh on mu.hall_id = mh.hall_id
+        join cinema_hall mh on mu.hall_id = mh.hall_id
         join hall_state hs on mh.state_id = hs.state_id
         where hs.state_id = 1
     </select>
+
     <!-- 根据ID查询上下映信息 -->
     <select id="getMovieUpdownInfoById" resultMap="MovieUpdownMap">
         select mu.updown_id, mu.up_date,mu.movie_id, mu.movie_name, mu.start_time, mu.end_time, mh.hall_name, mh.hall_type, hs.hall_state
         from movie_updown mu
-        join movie_hall mh on mu.hall_id = mh.hall_id
+        join cinema_hall mh on mu.hall_id = mh.hall_id
         join hall_state hs on mh.state_id = hs.state_id
         where mu.updown_id = #{updownId}
     </select>
+
      <!--查询电影根据ID-->
     <select id="listMovieInfo" resultMap="MovieMap">
         select  movie_id,movie_name from movie_info
-    </select>
-
-    <!-- ID查询信息 -->
-    <select id="findMovieInfoById" resultMap="MovieMap" parameterType="integer">
-        select  movie_id,movie_name from movie_info where movie_id = #{movieId}
     </select>
 
     <!-- 名称查询ID -->
@@ -83,25 +91,22 @@
 
     <!-- 添加影厅信息 -->
     <insert id="addMovieHall" parameterType="edu.nf.movie.moviehall.entity.MovieHallInfo">
-        insert into movie_hall(hall_name,hall_type,seat_num,hall_price,state_id)
-        values(#{hallName},#{hallType},#{seatNum},#{hallPrice},#{stateId})
+        insert into cinema_hall(cinema_id,hall_name,hall_type,hall_row,hall_col,hall_price,state_id)
+        values(#{cinemaId},#{hallName},#{hallType},#{hallRow},#{hallCol},#{hallPrice},#{stateId})
     </insert>
 
     <!-- 删除影厅 -->
     <delete id="removeMovieHall" parameterType="integer">
-        delete from movie_hall where hall_id = #{hallId}
+        delete from cinema_hall where hall_id = #{hallId}
     </delete>
 
     <!-- 影厅信息 -->
     <select id="listMovieHall" resultMap="MovieHallMap">
-        select mh.hall_id,mh.hall_name,mh.hall_type,mh.seat_num,mh.hall_price,mh.state_id,hs.hall_state
-        from movie_hall mh
+        select mh.hall_id,mh.cinema_id,ci.cinema_name,mh.hall_name,mh.hall_type,mh.hall_row,mh.hall_col,
+        mh.hall_price,mh.state_id,hs.hall_state
+        from cinema_hall mh
+        join cinema_info ci on mh.cinema_id = ci.cinema_id
         join hall_state hs on mh.state_id = hs.state_id
-        <where>
-            <if test="param1.hallName != null and param1.hallName != '' ">
-                mh.hall_name = #{param1.hallName}"%"
-            </if>
-        </where>
     </select>
 
 <!--    &lt;!&ndash; 根据名称查影厅信息 &ndash;&gt;
@@ -114,15 +119,27 @@
 
     <!-- 根据ID查询影厅信息 -->
     <select id="getMovieHallById" parameterType="integer" resultMap="MovieHallMap">
-        select mh.hall_id,mh.hall_name,mh.hall_type,mh.seat_num,mh.hall_price,mh.state_id,hs.hall_state
-        from movie_hall mh
+        select mh.hall_id,mh.cinema_id,mh.hall_name,mh.hall_type,mh.hall_row,mh.hall_col,
+        mh.hall_price,mh.state_id,hs.hall_state,ci.cinema_name
+        from cinema_hall mh
+        join cinema_info ci on mh.cinema_id = ci.cinema_id
         join hall_state hs on mh.state_id = hs.state_id
         where mh.hall_id = #{movieHallId}
     </select>
     
     <update id="updateHallInfo" parameterType="edu.nf.movie.moviehall.entity.MovieHallInfo">
-        update movie_hall set hall_name = #{hallName},hall_type = #{hallType},
-        seat_num = #{seatNum}, hall_price = #{hallPrice}, state_id = #{stateId}
+        update cinema_hall set cinema_id = #{cinemaId}, hall_name = #{hallName},hall_type = #{hallType},
+        hall_row = #{hallRow}, hall_col = #{hallCol}, hall_price = #{hallPrice}, state_id = #{stateId}
         where hall_id = #{hallId}
     </update>
+
+    <select id="listMovieCinemaInfo" resultMap="MovieCinema">
+        select cinema_id,cinema_name from cinema_info
+    </select>
+
+    <select id="getInfoByName" parameterType="edu.nf.movie.moviehall.entity.MovieCinema">
+        select cinema_id from cinema_info
+        where cinema_Name = #{cinemaName}
+    </select>
+
 </mapper>

@@ -48,25 +48,16 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">选择电影</label>
 					<div class="layui-input-inline">
-						<select id="movieIdList">
-							<option>请选择</option>
-						</select>
-					</div>
-					<div class="layui-input-inline">
 						<select id="movieNameList">
 							<option>请选择</option>
 						</select>
-					</div>
-					<div class="layui-input-inline">
-						<input type="text" name="movieName2" placeholder="输入电影名">
-						<button class="layui-btn" lay-submit lay-filter="submitBut">查找</button>
 					</div>
 				</div>
 
 				<div class="layui-form-item">
 					<label class="layui-form-label">厅名</label>
 					<div class="layui-input-inline">
-						<select name="cityid" id="cityid2">
+						<select name="hallName" id="cityid2">
 							<option value="">2</option>
 						</select>
 					</div>
@@ -74,7 +65,7 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">影厅类型</label>
 	                <div class="layui-input-inline">
-	                    <select name="cityid" id="cityid">
+	                    <select name="cinemaName" id="cityid">
 	                        <option value="">1</option>
 	                    </select>
 	                </div>
@@ -82,13 +73,13 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">开始时间</label>
 					<div class="layui-input-inline shortInput">
-						<input type="text" name="realName" required lay-verify="required|ZHCheck" placeholder="例:张三(只允许输入中文)" autocomplete="off" class="layui-input">
+						<input type="text" name="movieStartTime" required lay-verify="required|ZHCheck" placeholder="例:8:00" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">结束时间</label>
 					<div class="layui-input-inline shortInput">
-						<input type="text" name="realName" required lay-verify="required|ZHCheck" placeholder="例:张三(只允许输入中文)" autocomplete="off" class="layui-input">
+						<input type="text" name="movieEndTime" required lay-verify="required|ZHCheck" placeholder="例:12:00" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
@@ -122,14 +113,31 @@
 						success : function (result) {
 							if(result.code == 200){
 								$.each(result.data,function (index,obj) {
-									$('#movieIdList').append(
-											'<option value="'+obj.movieId+'">'+obj.movieId+'</option>'
+									$('#movieNameList').append(
+											'<option value="'+obj.movieId+'" id="'+obj.movieId+'" name="movieId">'+obj.movieName+'</option>'
 									);
 									form.render();
 								});
+							}
+						}
+					});
+				});
+			}
+			function  loadForm() {
+				layui.use('form', function(){
+					var $ = layui.jquery;
+					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+					$.ajax({
+						url : 'list_movie_hall',
+						method : 'get',
+						success : function (result) {
+							if(result.code == 200){
 								$.each(result.data,function (index,obj) {
-									$('#movieNameList').append(
-											'<option>'+obj.movieName+'</option>'
+									$('#hallName').append(
+											'<option name="movieId">'+obj.hallName+'</option>'
+									);
+									$('#cinemaName').append(
+											'<option name="movieId">'+obj.hallType+'</option>'
 									);
 									form.render();
 								});

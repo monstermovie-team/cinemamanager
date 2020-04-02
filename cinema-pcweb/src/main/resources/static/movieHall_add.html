@@ -41,6 +41,15 @@
 		<div class="cBody">
 			<form id="addForm" class="layui-form" action="">
 				<div class="layui-form-item">
+					<label class="layui-form-label">影院名</label>
+					<div class="layui-input-inline">
+						<select id="cinemaList" name="cinemaId">
+							<option>请选择</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
 					<label class="layui-form-label">厅名</label>
 					<div class="layui-input-inline">
 						<input type="text" name="hallName" required lay-verify="required" autocomplete="off" class="layui-input">
@@ -55,9 +64,16 @@
 				</div>
 
 				<div class="layui-form-item">
-					<label class="layui-form-label">座位数</label>
+					<label class="layui-form-label">座位行</label>
 					<div class="layui-input-inline">
-						<input type="text" name="seatNum" required lay-verify="required" autocomplete="off" class="layui-input">
+						<input type="text" name="hallRow" required lay-verify="required" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">座位列</label>
+					<div class="layui-input-inline">
+						<input type="text" name="hallCol" required lay-verify="required" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
@@ -105,6 +121,24 @@
 			</script>
 			<script src="js/jquery-1.12.4.min.js"></script>
 			<script>
+				$(function(){
+					layui.use('form', function() {
+						var $ = layui.jquery;
+						var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+						$.ajax({
+							url : 'list_movie_cinema',
+							method : 'get',
+							success : function (result) {
+								$.each(result.data,function (index,obj) {
+									$('#cinemaList').append(
+											'<option value="'+obj.cinemaId+'" id="'+obj.cinemaId+'">'+obj.cinemaName+'</option>'
+									)
+									form.render();
+								})
+							}
+						})
+					})
+				});
 				function addFormInfo() {
 					var formInfo = $('#addForm').serialize();
 					$.ajax({

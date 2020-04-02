@@ -2,6 +2,7 @@ package edu.nf.movie.moviehall.service.impl;
 
 import com.github.pagehelper.PageInfo;
 import edu.nf.movie.moviehall.dao.MovieHallDao;
+import edu.nf.movie.moviehall.entity.MovieCinema;
 import edu.nf.movie.moviehall.entity.MovieHallInfo;
 import edu.nf.movie.moviehall.entity.MovieUpdown;
 import edu.nf.movie.moviehall.service.MovieHallService;
@@ -26,8 +27,8 @@ public class MovieHallServiceImpl implements MovieHallService {
     }
 
     @Override
-    public PageInfo<MovieHallInfo> listMovieHall(MovieHallInfo movieHallInfo,Integer pageNum, Integer pageSize) {
-        List<MovieHallInfo> list = movieHallDao.listMovieHall(movieHallInfo,pageNum,pageSize);
+    public PageInfo<MovieHallInfo> listMovieHall(Integer pageNum, Integer pageSize) {
+        List<MovieHallInfo> list = movieHallDao.listMovieHall(pageNum,pageSize);
         return new PageInfo<>(list);
     }
 
@@ -51,5 +52,17 @@ public class MovieHallServiceImpl implements MovieHallService {
     @Override
     public void updateHallInfo(MovieHallInfo movieHallInfo) {
         movieHallDao.updateHallInfo(movieHallInfo);
+    }
+
+    @Override
+    public List<MovieCinema> listMovieCinemaInfo() {
+        List<MovieCinema> cinemas = movieHallDao.listMovieCinemaInfo();
+        return cinemas;
+    }
+
+    @Override
+    public MovieCinema getInfoByName(String cinemaName) {
+        MovieCinema cinema = movieHallDao.getInfoByName(cinemaName);
+        return cinema;
     }
 }

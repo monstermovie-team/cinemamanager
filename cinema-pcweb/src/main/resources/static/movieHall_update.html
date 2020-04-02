@@ -39,44 +39,60 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">编号</label>
 			<div class="layui-input-block">
-				<input type="text" name="hallId" id="hallId" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" name="hallId" id="hallId" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
+		</div>
+
+		<div class="layui-form-item">
+			<label class="layui-form-label">影院名</label>
+				<div class="layui-input-inline">
+					<select id="cinemaList" name="cinemaId" style="width:60%;">
+
+					</select>
+				</div>
 		</div>
 
 		<div class="layui-form-item">
 			<label class="layui-form-label">厅名</label>
 			<div class="layui-input-block">
-				<input type="text" name="hallName" id="hallName" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" name="hallName" id="hallName" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
 		</div>
 
 		<div class="layui-form-item">
 			<label class="layui-form-label">厅类型</label>
 			<div class="layui-input-block">
-				<input type="text" name="hallType" id="hallType" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" name="hallType" id="hallType" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
 		</div>
 
 		<div class="layui-form-item">
-			<label class="layui-form-label">座位数</label>
+			<label class="layui-form-label">座位行</label>
 			<div class="layui-input-block">
-				<input type="text" name="seatNum" id="seatNum" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" name="hallRow" id="hallRow" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
+			</div>
+		</div>
+
+		<div class="layui-form-item">
+			<label class="layui-form-label">座位列</label>
+			<div class="layui-input-block">
+				<input type="text" name="hallCol" id="hallCol" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
 		</div>
 
 		<div class="layui-form-item">
 			<label class="layui-form-label">价格</label>
 			<div class="layui-input-block">
-				<input type="text" name="hallPrice" id="hallPrice" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" name="hallPrice" id="hallPrice" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
 		</div>
 
-		<input type="hidden" name="stateId" id="stateId" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+		<input type="hidden" name="stateId" id="stateId" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 
 		<div class="layui-form-item">
 			<label class="layui-form-label">状态</label>
 			<div class="layui-input-block">
-				<input type="text" id="hallState" required lay-verify="required" autocomplete="off" class="layui-input" style="width:50%;">
+				<input type="text" id="hallState" required lay-verify="required" autocomplete="off" class="layui-input" style="width:60%;">
 			</div>
 		</div>
 
@@ -89,6 +105,25 @@
 
 	<script>
 		$(function () {
+			$(function(){
+				layui.use('form', function() {
+					var $ = layui.jquery;
+					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+					$.ajax({
+						url : 'list_movie_cinema',
+						method : 'get',
+						success : function (result) {
+							$.each(result.data,function (index,obj) {
+								$('#cinemaList').append(
+										'<option value="'+obj.cinemaId+'" id="'+obj.cinemaId+'">'+obj.cinemaName+'</option>'
+								)
+								form.render();
+							})
+						}
+					})
+				})
+			});
+
 			var id = parent.id;
 			$.ajax({
 				url : 'get_movie_hall_by_id',
@@ -106,11 +141,11 @@
 						$('#hallId').val(result.data.hallId);
 						$('#hallName').val(result.data.hallName);
 						$('#hallType').val(result.data.hallType);
-						$('#seatNum').val(result.data.seatNum);
+						$('#hallRow').val(result.data.hallRow);
+						$('#hallCol').val(result.data.hallCol);
 						$('#hallPrice').val(result.data.hallPrice);
 						$('#stateId').val(result.data.stateId);
 						$('#hallState').val(result.data.hallState.hallState);
-
 					}
 				}
 			});

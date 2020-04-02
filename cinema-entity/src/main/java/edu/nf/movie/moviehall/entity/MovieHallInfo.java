@@ -14,6 +14,10 @@ public class MovieHallInfo {
      */
     private Integer hallId;
     /**
+     * 影院ID
+     */
+    private Integer cinemaId;
+    /**
      * 影厅名称
      */
     private String hallName;
@@ -22,9 +26,13 @@ public class MovieHallInfo {
      */
     private String hallType;
     /**
-     * 座位数量
+     * 座位行
      */
-    private Integer seatNum;
+    private Integer hallRow;
+    /**
+     * 座位列
+     */
+    private Integer hallCol;
     /**
      * 影厅价格
      */
@@ -34,11 +42,17 @@ public class MovieHallInfo {
      */
     private Integer stateId;
 
+
+
     /**
      * 外键状态id
      */
     private HallState hallState;
 
+    /**
+     * 外键影院表id
+     */
+    private MovieCinema movieCinema;
 
 
 }

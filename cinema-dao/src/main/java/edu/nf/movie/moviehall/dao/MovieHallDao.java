@@ -1,6 +1,7 @@
 package edu.nf.movie.moviehall.dao;
 
 
+import edu.nf.movie.moviehall.entity.MovieCinema;
 import edu.nf.movie.moviehall.entity.MovieHallInfo;
 import edu.nf.movie.moviehall.entity.MovieInfo;
 import edu.nf.movie.moviehall.entity.MovieUpdown;
@@ -24,7 +25,7 @@ public interface MovieHallDao {
 
     MovieUpdown addMovieUpdown(MovieUpdown movieUpdown);
 
-    List<MovieHallInfo> listMovieHall(MovieHallInfo movieHallInfo,@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize);
+    List<MovieHallInfo> listMovieHall(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize);
 
     /*List<MovieHallInfo> listMovieHallByName(String hallName);*/
 
@@ -35,4 +36,8 @@ public interface MovieHallDao {
     int removeMovieHall(Integer hallId);
 
     void updateHallInfo(MovieHallInfo movieHallInfo);
+
+    List<MovieCinema> listMovieCinemaInfo();
+
+    MovieCinema getInfoByName(String cinemaName);
 }

@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author BoomShaGa1aGa
  * @date 2020-03-02
  */
+
 @SpringBootApplication
 @MapperScan(basePackages = {"edu.nf.movie.cinema.dao","edu.nf.movie.moviehall.dao"})
 public class MonsterMovieApplication {
@@ -15,4 +16,5 @@ public class MonsterMovieApplication {
     public static void main(String[] args) {
         SpringApplication.run(MonsterMovieApplication.class);
     }
+
 }

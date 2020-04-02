@@ -55,9 +55,11 @@
 				<thead>
 					<tr>
 						<th>编号</th>
+						<th>影院名</th>
 						<th>厅名</th>
 						<th>厅类型</th>
-						<th>座位数</th>
+						<th>座位行</th>
+						<th>座位列</th>
 						<th>价格</th>
 						<th>状态</th>
 						<th>操作</th>
@@ -88,7 +90,7 @@
 					xhrFields: {
 						withCredentials: true
 					},
-					data: 'pageNum=1&pageSize=18&'+params,
+					data: 'pageNum=1&pageSize=30&'+params,
 					success: function (result) {
 						if(result.code == 200){
 							listMovieHall(result);
@@ -103,9 +105,11 @@
 					$('#tab').append(
 							'<tr>'+
 							'<td>'+obj.hallId+'</td>' +
+							'<td>'+obj.movieCinema.cinemaName+'</td>' +
 							'<td>'+obj.hallName+'</td>' +
 							'<td>'+obj.hallType+'</td>' +
-							'<td>'+obj.seatNum+'</td>' +
+							'<td>'+obj.hallRow+'</td>' +
+							'<td>'+obj.hallCol+'</td>' +
 							'<td>'+obj.hallPrice+'</td>' +
 							'<td>'+obj.hallState.hallState+'</td>' +
 							'<td>' +
@@ -173,7 +177,7 @@
 					updateFrame = layer.open({
 						title: "影厅信息修改",
 						type: 2,
-						area: ['30%', '60%'],
+						area: ['30%', '80%'],
 						scrollbar: false,	//默认：true,默认允许浏览器滚动，如果设定scrollbar: false，则屏蔽
 						maxmin: true,
 						content: 'movieHall_update.html'

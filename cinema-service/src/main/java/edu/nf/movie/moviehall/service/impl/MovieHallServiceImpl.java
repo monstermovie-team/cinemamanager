@@ -44,8 +44,8 @@ public class MovieHallServiceImpl implements MovieHallService {
     }
 
     @Override
-    public MovieHallInfo getMovieHallById(Integer movieHallId) {
-        MovieHallInfo info = movieHallDao.getMovieHallById(movieHallId);
+    public List<MovieHallInfo> getMovieHallById(Integer movieHallId) {
+        List<MovieHallInfo> info = movieHallDao.getMovieHallById(movieHallId);
         return info;
     }
 
@@ -64,5 +64,11 @@ public class MovieHallServiceImpl implements MovieHallService {
     public MovieCinema getInfoByName(String cinemaName) {
         MovieCinema cinema = movieHallDao.getInfoByName(cinemaName);
         return cinema;
+    }
+
+    @Override
+    public MovieHallInfo getMovieHallById2(Integer movieHallId) {
+        MovieHallInfo movieHallInfo = movieHallDao.getMovieHallById2(movieHallId);
+        return movieHallInfo;
     }
 }

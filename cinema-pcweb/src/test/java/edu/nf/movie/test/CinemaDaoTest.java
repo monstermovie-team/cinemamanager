@@ -1,10 +1,7 @@
 package edu.nf.movie.test;
 
-import com.github.pagehelper.PageInfo;
 import edu.nf.movie.cinema.service.CinemaService;
 import edu.nf.movie.moviehall.entity.MovieHallInfo;
-import edu.nf.movie.moviehall.entity.MovieInfo;
-import edu.nf.movie.moviehall.entity.MovieUpdown;
 import edu.nf.movie.moviehall.service.MovieHallService;
 import edu.nf.movie.moviehall.service.MovieInfoService;
 import org.junit.Test;
@@ -38,8 +35,10 @@ public class CinemaDaoTest {
 
     @Test
     public void testMovieType() {
-        PageInfo<MovieHallInfo> pageInfo = movieHallService.listMovieHall(1, 5);
-        pageInfo.getList().forEach(movieHallInfo -> System.out.println(movieHallInfo));
+       List<MovieHallInfo> mh = movieHallService.getMovieHallById(1);
+        for (MovieHallInfo movieHallInfo : mh) {
+            System.out.println(movieHallInfo.toString());
+        }
     }
 
 

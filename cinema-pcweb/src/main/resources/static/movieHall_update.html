@@ -126,8 +126,8 @@
 
 			var id = parent.id;
 			$.ajax({
-				url : 'get_movie_hall_by_id',
-				method : 'post',
+				url : 'get_movie_hall_by_id2',
+				method : 'get',
 				data : 'movieHallId=' + id,
 				success : function (result) {
 					if(result.code == 200){

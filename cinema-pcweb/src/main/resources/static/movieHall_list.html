@@ -33,10 +33,14 @@
 			<div class="console">
 				<form id="selectForm" class="layui-form">
 					<div class="layui-form-item">
-						<div class="layui-input-inline">
-							<input type="text" name="hallName" placeholder="输入影厅名称" class="layui-input"/>
+						<div class="layui-form-item">
+							<div class="layui-input-inline">
+								<select id="cinemaList" name="cinemaId" style="width:60%;">
+
+								</select>
+							</div>
+							<input type="button" class="layui-btn" id="selectInfo" value="搜索"/>
 						</div>
-						<input type="button" class="layui-btn" id="selectInfo" value="搜索"/>
 					</div>
 				</form>
 				<script>
@@ -75,12 +79,74 @@
 		<script>
 			$(function () {
 				start();
+				loadMovieCiname();
 
 				$('#selectInfo').on('click',function(){
-					$('#tab').remove();
-					start();
+					var formInfo = $('#selectForm').serialize();
+					$.ajax({
+						url : 'get_movie_hall_by_id',
+						method : 'get',
+						data : formInfo,
+						success : function(result){
+							if(result.code == 200){
+								$('#tab').empty();
+								$.each(result.data,function(index, obj){
+									$('#tab').append(
+											'<tr>'+
+											'<td>'+obj.hallId+'</td>' +
+											'<td>'+obj.movieCinema.cinemaName+'</td>' +
+											'<td>'+obj.hallName+'</td>' +
+											'<td>'+obj.hallType+'</td>' +
+											'<td>'+obj.hallRow+'</td>' +
+											'<td>'+obj.hallCol+'</td>' +
+											'<td>'+obj.hallPrice+'</td>' +
+											'<td>'+obj.hallState.hallState+'</td>' +
+											'<td>' +
+											'<button class="layui-btn layui-btn-xs" onclick="updateBut('+obj.hallId+')">修改</button>' +
+											'<button class="layui-btn layui-btn-xs" name="btnDelete'+obj.hallId+'" id="'+obj.hallId+'">删除</button>' +
+											'</td>' +
+											'</tr>'
+									)
+									$("button[name='btnDelete"+obj.hallId+"']").on('click',function(){
+										var r = confirm("你确定要删除吗？");
+										var hallId = $(this).attr('id');
+										if (r == true) {
+											$.ajax({
+												url : 'remove_movie_hall',
+												method : 'post',
+												data : 'hallId=' +hallId,
+												success : function (result) {
+													location.href="movieHall_list.html";
+													alert("删除成功！");
+												}
+											});
+										}
+									});
+								});
+							}
+						}
+					});
 				})
 			});
+
+			function loadMovieCiname() {
+				layui.use('form', function() {
+					var $ = layui.jquery;
+					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+					$.ajax({
+						url : 'list_movie_cinema',
+						method : 'get',
+						success : function (result) {
+							$.each(result.data,function (index,obj) {
+								$('#cinemaList').append(
+										'<option value="'+obj.cinemaId+'" id="'+obj.cinemaId+'">'+obj.cinemaName+'</option>'
+								)
+								form.render();
+							})
+						}
+					})
+				})
+			}
 
 			function start(){
 				var params = $('#selectForm').serialize();

@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbb6d82-df27-43d7-8995-fbea556c2b71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieCinema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/img/login_bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/img/login_bg4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-dao/src/main/java/edu/nf/movie/moviehall/dao/MovieHallDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-dao/src/main/java/edu/nf/movie/moviehall/dao/MovieHallDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-dao/src/main/resources/mapper/movieHallMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-dao/src/main/resources/mapper/movieHallMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/cinema/entity/CinemaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/cinema/entity/CinemaInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieHallInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieHallInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/MonsterMovieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/MonsterMovieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieUpdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-entity/src/main/java/edu/nf/movie/moviehall/entity/MovieUpdown.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/moviehall/pcweb/controller/MovieHallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/java/edu/nf/movie/moviehall/pcweb/controller/MovieHallController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieHall_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieUpdown_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movieUpdown_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/movie_updown_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-pcweb/src/test/java/edu/nf/movie/test/CinemaDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieHallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/MovieInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieHallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieHallServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-service/src/main/java/edu/nf/movie/moviehall/service/impl/MovieInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cinema-pcweb/src/main/resources/static/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,16 +105,6 @@
       <recent name="edu.nf.movie.cinema.dao" />
       <recent name="edu.nf.movie.cinema.service.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\tgls\agent" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
-      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
-      <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\moviead" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.nf.movie.cinema.service.exception" />
       <recent name="edu.nf.movie.moviehall.pcweb.vo" />
@@ -123,11 +113,21 @@
       <recent name="edu.nf.test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\js" />
       <recent name="E:\spring\cinemamanager\cinema-dao\src\main\resources\mapper" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\tgls\agent" />
       <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\img" />
+      <recent name="E:\spring\cinemamanager\cinema-pcweb\src\main\resources\static\css" />
+      <recent name="E:\spring\monstermovie\movie-pcweb\src\main\resources\moviead" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MonsterMovieApplication">
@@ -273,7 +273,9 @@
       <workItem from="1585797137476" duration="11000" />
       <workItem from="1585797259240" duration="13000" />
       <workItem from="1585797942424" duration="616000" />
-      <workItem from="1585798590391" duration="9965000" />
+      <workItem from="1585798590391" duration="10148000" />
+      <workItem from="1585826382537" duration="8252000" />
+      <workItem from="1585834769318" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1583149734797</created>
@@ -352,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585747371340</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit">
+      <created>1585810876864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585810876864</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,18 +403,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585798469037" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585807863934">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585835269687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585807863934" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585835269687" />
     <state x="518" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583417121530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="518" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583417121530" />
-    <state x="739" y="378" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583294188790">
+    <state x="739" y="378" width="456" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585831041938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="378" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1583294188790" />
+    <state x="739" y="378" width="456" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1585831041938" />
     <state x="349" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584426413852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -414,55 +423,55 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583980226380" />
-    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1585747366429">
+    <state x="228" y="132" key="CommitChangelistDialog2" timestamp="1585810873937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585747366429" />
+    <state x="228" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585810873937" />
     <state x="1247" y="367" key="FileChooserDialogImpl" timestamp="1585798131696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1583411252405" />
     <state x="1247" y="367" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585798131696" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.0.bottom" timestamp="1585835478533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478533" />
+    <state width="1657" height="360" key="GridCell.Tab.0.center" timestamp="1585835478532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478532" />
+    <state width="1657" height="360" key="GridCell.Tab.0.left" timestamp="1585835478532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478532" />
+    <state width="1657" height="360" key="GridCell.Tab.0.right" timestamp="1585835478532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="188" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758410" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1585810380790">
+    <state width="1657" height="360" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478532" />
+    <state width="1657" height="360" key="GridCell.Tab.1.bottom" timestamp="1585835478533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380790" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478533" />
+    <state width="1657" height="360" key="GridCell.Tab.1.center" timestamp="1585835478533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.center/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1585810380789">
+    <state width="1657" height="360" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478533" />
+    <state width="1657" height="360" key="GridCell.Tab.1.left" timestamp="1585835478533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.left/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380789" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1585810380790">
+    <state width="1657" height="360" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478533" />
+    <state width="1657" height="360" key="GridCell.Tab.1.right" timestamp="1585835478533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1685" height="325" key="GridCell.Tab.1.right/0.0.1728.1040@0.0.1728.1040" timestamp="1583649758399" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585810380790" />
+    <state width="1657" height="360" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585835478533" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1585798571949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -488,15 +497,15 @@
     </state>
     <state x="396" y="94" key="SettingsEditor/0.0.1728.1040@0.0.1728.1040" timestamp="1583411284022" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585798235725" />
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1585747376377">
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2" timestamp="1585810879648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585747376377" />
-    <state x="769" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1585798590241">
+    <state x="433" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585810879648" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog" timestamp="1585836034303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="692" y="336" key="com.intellij.ide.util.TipDialog/0.0.1728.1040@0.0.1728.1040" timestamp="1583409418147" />
-    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585798590241" />
+    <state x="769" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585836034303" />
     <state x="711" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583398872039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -505,9 +514,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="650" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584074819770" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584591857943">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585830561169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584591857943" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585830561169" />
   </component>
 </project>

@@ -30,7 +30,7 @@ public class MovieUpdown {
      */
     private String movieName;
     /**
-     * 状态
+     * 影厅
      */
     private Integer hallId;
     /**

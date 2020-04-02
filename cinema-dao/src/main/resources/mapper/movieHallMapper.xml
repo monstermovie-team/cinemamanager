@@ -61,7 +61,7 @@
         from movie_updown mu
         join cinema_hall mh on mu.hall_id = mh.hall_id
         join hall_state hs on mh.state_id = hs.state_id
-        where hs.state_id = 1
+        where hs.state_id = 2
     </select>
 
     <!-- 根据ID查询上下映信息 -->
@@ -86,7 +86,7 @@
     <!-- 添加上映信息 -->
     <insert id="addMovieUpdown" parameterType="edu.nf.movie.moviehall.entity.MovieUpdown">
         insert into movie_updown(up_date,movie_id,movie_name,hall_id,start_time,end_time)
-            values('2020-3-13','1','调酒师','1','8:30','12:00');
+            values(#{update},#{movieId},#{movieName},#{hallId},#{movieStartTime},#{movieEndTime});
     </insert>
 
     <!-- 添加影厅信息 -->
@@ -119,6 +119,16 @@
 
     <!-- 根据ID查询影厅信息 -->
     <select id="getMovieHallById" parameterType="integer" resultMap="MovieHallMap">
+        select mh.hall_id,mh.cinema_id,mh.hall_name,mh.hall_type,mh.hall_row,mh.hall_col,
+        mh.hall_price,mh.state_id,hs.hall_state,ci.cinema_name
+        from cinema_hall mh
+        join cinema_info ci on mh.cinema_id = ci.cinema_id
+        join hall_state hs on mh.state_id = hs.state_id
+        where mh.cinema_id = #{param1}
+    </select>
+
+    <!-- 根据ID查询影厅信息2 -->
+    <select id="getMovieHallById2" parameterType="integer" resultMap="MovieHallMap">
         select mh.hall_id,mh.cinema_id,mh.hall_name,mh.hall_type,mh.hall_row,mh.hall_col,
         mh.hall_price,mh.state_id,hs.hall_state,ci.cinema_name
         from cinema_hall mh

@@ -41,41 +41,35 @@
 				<div class="layui-form-item" id="divApp">
 					<label class="layui-form-label">放映日期</label>
 					<div class="layui-input-inline shortInput">
-						<input type="date" name="identity" required lay-verify="required|identity" autocomplete="off" class="layui-input">
+						<input type="date" name="upDate" required lay-verify="required|identity" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
 				<div class="layui-form-item">
 					<label class="layui-form-label">选择电影</label>
 					<div class="layui-input-inline">
-						<select id="movieNameList">
+						<select id="movieNameList" name="movieId">
 							<option>请选择</option>
 						</select>
 					</div>
 				</div>
 
 				<div class="layui-form-item">
-					<label class="layui-form-label">厅名</label>
+					<label class="layui-form-label">影厅类型</label>
 					<div class="layui-input-inline">
-						<select name="hallName" id="cityid2">
-							<option value="">2</option>
+						<select id="cinemaName" name="hallId">
+
 						</select>
 					</div>
 				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">影厅类型</label>
-	                <div class="layui-input-inline">
-	                    <select name="cinemaName" id="cityid">
-	                        <option value="">1</option>
-	                    </select>
-	                </div>
-				</div>
+
 				<div class="layui-form-item">
 					<label class="layui-form-label">开始时间</label>
 					<div class="layui-input-inline shortInput">
 						<input type="text" name="movieStartTime" required lay-verify="required|ZHCheck" placeholder="例:8:00" autocomplete="off" class="layui-input">
 					</div>
 				</div>
+
 				<div class="layui-form-item">
 					<label class="layui-form-label">结束时间</label>
 					<div class="layui-input-inline shortInput">
@@ -83,27 +77,34 @@
 					</div>
 				</div>
 
-				<div class="layui-form-item">
-					<label class="layui-form-label">是否开通</label>
-					<div class="layui-input-block">
-						<input type="radio" name="sex" value="nan" title="启用" checked>
-						<input type="radio" name="sex" value="nv" title="禁用">
-					</div>
-				</div>
-				
+				<input type="hidden" name="hallState" value="1"/>
+
 				<div class="layui-form-item">
 					<div class="layui-input-block">
-						<button class="layui-btn" >立即提交</button>
+						<input type="button" class="layui-btn" id="subAdd" value="上映"/>
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
+
 			</form>
 		</div>
 		<script>
 			$(function(){
-				loadForm();
+				loadForm1();
+				loadForm2();
+				$('#subAdd').on('click',function(){
+					var formInfo = $('#addForm').serialize();
+					$.ajax({
+						url :'add_movie_updown',
+						method: 'post',
+						data: formInfo,
+						success: function(result){
+							alert("上映成功");
+						}
+					});
+				})
 			})
-			function  loadForm() {
+			function  loadForm1() {
 				layui.use('form', function(){
 					var $ = layui.jquery;
 					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
@@ -114,7 +115,7 @@
 							if(result.code == 200){
 								$.each(result.data,function (index,obj) {
 									$('#movieNameList').append(
-											'<option value="'+obj.movieId+'" id="'+obj.movieId+'" name="movieId">'+obj.movieName+'</option>'
+											'<option id="'+obj.movieId+'" name="movieId">'+obj.movieName+'</option>'
 									);
 									form.render();
 								});
@@ -123,7 +124,7 @@
 					});
 				});
 			}
-			function  loadForm() {
+			function  loadForm2() {
 				layui.use('form', function(){
 					var $ = layui.jquery;
 					var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
@@ -132,12 +133,9 @@
 						method : 'get',
 						success : function (result) {
 							if(result.code == 200){
-								$.each(result.data,function (index,obj) {
-									$('#hallName').append(
-											'<option name="movieId">'+obj.hallName+'</option>'
-									);
+								$.each(result.data.list,function (index,obj) {
 									$('#cinemaName').append(
-											'<option name="movieId">'+obj.hallType+'</option>'
+											'<option id="'+obj.hallId+'">('+obj.hallName+')'+obj.hallType+'</option>'
 									);
 									form.render();
 								});

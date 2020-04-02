@@ -21,11 +21,13 @@ public interface MovieHallService {
 
     int removeMovieHall(Integer hallId);
 
-    MovieHallInfo getMovieHallById(Integer movieHallId);
+    List<MovieHallInfo> getMovieHallById(Integer movieHallId);
 
     void updateHallInfo(MovieHallInfo movieHallInfo);
 
     List<MovieCinema> listMovieCinemaInfo();
 
     MovieCinema getInfoByName(String cinemaName);
+
+    MovieHallInfo getMovieHallById2(Integer movieHallId);
 }

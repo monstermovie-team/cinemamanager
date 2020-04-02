@@ -77,9 +77,15 @@ public class MovieHallController extends BaseController{
         return size;
     }
 
-    @PostMapping("/get_movie_hall_by_id")
-    private ResultVO<MovieHallInfo> getMovieHallById(Integer movieHallId){
-        MovieHallInfo info = movieHallService.getMovieHallById(movieHallId);
+    @GetMapping("/get_movie_hall_by_id")
+    private ResultVO<List<MovieHallInfo>> getMovieHallById(Integer cinemaId){
+        List<MovieHallInfo> info = movieHallService.getMovieHallById(cinemaId);
+        return success(info);
+    }
+
+    @GetMapping("/get_movie_hall_by_id2")
+    private ResultVO<MovieHallInfo> getMovieHallById2(Integer movieHallId){
+        MovieHallInfo info = movieHallService.getMovieHallById2(movieHallId);
         return success(info);
     }
 
@@ -93,9 +99,15 @@ public class MovieHallController extends BaseController{
         List<MovieCinema> list = movieHallService.listMovieCinemaInfo();
         return success(list);
     }
+
     @GetMapping("/get_cinema_id")
     private ResultVO<MovieCinema> getInfoByName(String cinemaName){
         MovieCinema cinema = movieHallService.getInfoByName(cinemaName);
         return success(cinema);
+    }
+
+    @PostMapping("/add_movie_updown")
+    private void addMovieUpdown(MovieUpdown movieUpdown){
+        movieInfoService.addMovieUpdown(movieUpdown);
     }
 }

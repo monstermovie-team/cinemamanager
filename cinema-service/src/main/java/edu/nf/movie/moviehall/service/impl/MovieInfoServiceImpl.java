@@ -3,6 +3,7 @@ package edu.nf.movie.moviehall.service.impl;
 import edu.nf.movie.cinema.service.exception.DataAccessException;
 import edu.nf.movie.moviehall.dao.MovieHallDao;
 import edu.nf.movie.moviehall.entity.MovieInfo;
+import edu.nf.movie.moviehall.entity.MovieUpdown;
 import edu.nf.movie.moviehall.service.MovieInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,4 +44,13 @@ public class MovieInfoServiceImpl implements MovieInfoService {
         }
     }
 
+    @Override
+    public void addMovieUpdown(MovieUpdown movieUpdown) {
+        try{
+            movieHallDao.addMovieUpdown(movieUpdown);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new DataAccessException("服务器内部错误，请稍后访问!");
+        }
+    }
 }

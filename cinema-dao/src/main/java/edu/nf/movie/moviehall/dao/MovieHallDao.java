@@ -23,13 +23,15 @@ public interface MovieHallDao {
 
     List<MovieInfo> findMovieInfoByName(String movieName);
 
-    MovieUpdown addMovieUpdown(MovieUpdown movieUpdown);
+    void addMovieUpdown(MovieUpdown movieUpdown);
 
     List<MovieHallInfo> listMovieHall(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize);
 
     /*List<MovieHallInfo> listMovieHallByName(String hallName);*/
 
-    MovieHallInfo getMovieHallById(Integer movieHallId);
+    List<MovieHallInfo> getMovieHallById(Integer movieHallId);
+
+    MovieHallInfo getMovieHallById2(Integer movieHallId);
 
     void addMovieHall(MovieHallInfo movieHallInfo);
 
